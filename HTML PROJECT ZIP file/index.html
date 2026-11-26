@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyTrack | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="logout-btn" onclick="logout()">
+        <span>↪</span> Logout
+    </button>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>✈ SkyTrack</h2>
+            <nav>
+                <a href="index.html" class="active">Dashboard</a>
+                <a href="reg.html">Registration</a>
+                <a href="track.html">Track Baggage</a>
+                <a href="records.html">Records</a>
+                <a href="manage.html">Manage Baggage</a>
+                <a href="exceptions.html">Baggage Exceptions</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header>
+                <h1>Dashboard</h1>
+                <p>Airport Baggage Management System</p>
+            </header>
+            <section class="stats">
+                <div class="card">
+                    <h3>Total Baggage</h3>
+                    <h2 id="totalBaggage">0</h2>
+                </div>
+                <div class="card">
+                    <h3>Loaded</h3>
+                    <h2 id="loadedBaggage">0</h2>
+                </div>
+                <div class="card">
+                    <h3>Processing</h3>
+                    <h2 id="processingBaggage">0</h2>
+                </div>
+
+                <div class="card">
+                    <h3>Pending</h3>
+                    <h2 id="pendingBaggage">0</h2>
+                </div>
+            </section>
+            <section class="records">
+                <h2>Recent Baggage Records</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Baggage ID</th>
+                            <th>Passenger Name</th>
+                            <th>Flight</th>
+                            <th>Destination</th>
+                            <th>Weight</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="baggageTableBody">
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

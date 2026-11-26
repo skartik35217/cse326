@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Airport Ops | Baggage Registration</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="logout-btn" onclick="logout()">
+    <span>↪</span> Logout
+</button>
+
+<div class="container">
+    <aside class="sidebar">
+        <h2>✈ SkyTrack</h2>
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="reg.html" class="active">Registration</a>
+            <a href="track.html">Track Baggage</a>
+            <a href="records.html">Records</a>
+            <a href="manage.html">Manage Baggage</a>
+            <a href="exceptions.html">Baggage Exceptions</a>
+        </nav>
+    </aside>
+    <main class="main-content">
+        <header>
+            <h1>Baggage Registration</h1>
+            <p>Register passenger baggage into the airport system.</p>
+        </header>
+        <section class="registration-section">
+            <div class="registration-heading">
+                <div>
+                    <h2>New Baggage Entry</h2>
+                    <p>Enter passenger and baggage information below.</p>
+                </div>
+                <span class="registration-tag">NEW ENTRY</span>
+            </div>
+            <form id="registrationForm">
+                <div class="form-section-title">
+                    Passenger Information
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="passengerName">Passenger Name</label>
+
+                        <input
+                            type="text"
+                            id="passengerName"
+                            placeholder="Enter passenger name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="passengerEmail">Email Address</label>
+
+                        <input
+                            type="email"
+                            id="passengerEmail"
+                            placeholder="Enter email address"
+                            required
+                        >
+                    </div>
+
+                </div>
+                <div class="form-section-title">
+                    Flight Information
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="flightNumber">Flight Number</label>
+
+                        <input
+                            type="text"
+                            id="flightNumber"
+                            placeholder="Example: AI202"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+
+                        <input
+                            type="text"
+                            id="destination"
+                            placeholder="Enter destination"
+                            required
+                        >
+                    </div>
+                </div>
+                <div class="form-section-title">
+                    Baggage Information
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="baggageWeight">Baggage Weight (KG)</label>
+
+                        <input
+                            type="number"
+                            id="baggageWeight"
+                            placeholder="Enter weight"
+                            min="0.1"
+                            step="0.1"
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="baggageType">Baggage Type</label>
+
+                        <select id="baggageType" required>
+                            <option value="">Select baggage type</option>
+                            <option value="Check-in">Check-in</option>
+                            <option value="Cabin">Cabin</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="form-actions">
+
+                    <button type="reset" class="reset-btn">
+                        Clear Form
+                    </button>
+
+                    <button type="submit" class="submit-btn">
+                        Register Baggage →
+                    </button>
+
+                </div>
+
+            </form>
+            <div id="registrationQR" style="display: none; margin-top: 25px; text-align: center;">
+    <h3>Baggage QR Code</h3>
+    <p id="qrBaggageID"></p>
+    <div id="qrCodeDisplay" style="display: flex; justify-content: center; margin: 20px;"></div>
+    <button type="button" id="downloadQR">Download QR Code</button>
+</div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="reg.js"></script>
+
+</body>
+<header class="top-header">
+    <div class="header-brand">
+        <span class="brand-icon">✈</span>
+        <span>SkyTrack</span>
+    </div>
+
+    <button class="logout-btn" onclick="logout()">
+        <span>↪</span> Logout
+    </button>
+</header>
+</html>
+

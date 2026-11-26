@@ -1,0 +1,482 @@
+
+/* ==============================
+   GLOBAL STYLES
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ==============================
+   BACKGROUND SKY VIDEO
+============================== */
+
+.sky-video {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -2;
+}
+
+.sky-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 45, 75, 0.08);
+    z-index: -1;
+}
+
+
+
+
+
+/* ==============================
+   LOGIN WRAPPER
+============================== */
+
+.login-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ==============================
+   GLASS LOGIN CARD
+============================== */
+
+.login-card {
+    width: 100%;
+    max-width: 385px;
+    padding: 38px 28px;
+
+    background: rgba(255, 255, 255, 0.28);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 3px solid rgba(255, 255, 255, 0.85);
+    border-radius: 30px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+
+    text-align: center;
+}
+
+
+/* ==============================
+   LOGO
+============================== */
+
+.logo-circle {
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+
+    font-size: 27px;
+    color: #244b70;
+}
+
+
+/* ==============================
+   HEADINGS
+============================== */
+
+.login-card h2 {
+    font-size: 27px;
+    font-weight: 700;
+    color: #172b42;
+    margin-bottom: 9px;
+}
+
+.subtitle {
+    font-size: 13px;
+    color: #465b70;
+    margin-bottom: 25px;
+}
+
+
+/* ==============================
+   SOCIAL LOGIN
+============================== */
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.social-btn {
+    width: 53px;
+    height: 43px;
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    cursor: pointer;
+    font-size: 19px;
+
+    transition: 0.2s;
+}
+
+.social-btn:hover {
+    background: rgba(255, 255, 255, 0.75);
+    transform: translateY(-2px);
+}
+
+.google-icon {
+    font-weight: 700;
+    color: #4285F4;
+}
+
+.linkedin-icon {
+    font-weight: 700;
+    color: #0A66C2;
+}
+
+
+/* ==============================
+   DIVIDER
+============================== */
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.divider span {
+    flex: 1;
+    height: 1px;
+    background: rgba(30, 50, 70, 0.25);
+}
+
+.divider p {
+    font-size: 11px;
+    color: #52677b;
+}
+
+
+/* ==============================
+   FORM
+============================== */
+
+form {
+    text-align: left;
+}
+
+form > label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #24384d;
+    margin-bottom: 8px;
+}
+
+form > input,
+.password-box input {
+    width: 100%;
+    height: 45px;
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 9px;
+
+    background: rgba(255, 255, 255, 0.45);
+
+    padding: 0 13px;
+    margin-bottom: 18px;
+
+    outline: none;
+    font-family: inherit;
+    font-size: 12px;
+    color: #172b42;
+}
+
+form input:focus {
+    border-color: #477ba9;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+
+/* ==============================
+   PASSWORD BOX
+============================== */
+
+.password-box {
+    position: relative;
+}
+
+.password-box input {
+    padding-right: 45px;
+}
+
+#togglePassword {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+    color: #40566b;
+    font-size: 16px;
+}
+
+
+/* ==============================
+   REMEMBER AND FORGOT
+============================== */
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 0 22px;
+    font-size: 10px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #34495e;
+}
+
+.remember input {
+    accent-color: #244b70;
+}
+
+.form-options a,
+.signup-text a {
+    color: #174d7b;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.form-options a:hover,
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   SIGN IN BUTTON
+============================== */
+
+.signin-btn {
+    width: 100%;
+    height: 45px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #172b42;
+    color: white;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.signin-btn:hover {
+    background: #294e70;
+    transform: translateY(-1px);
+}
+
+
+/* ==============================
+   SIGN UP
+============================== */
+
+.signup-text {
+    font-size: 11px;
+    color: #465b70;
+    margin-top: 22px;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+.footer-text {
+    font-size: 8px;
+    letter-spacing: 1px;
+    color: #52677b;
+    margin-top: 24px;
+}
+
+
+/* ==============================
+   TAKEOFF TRANSITION
+============================== */
+
+.takeoff-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: #10283f;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.5s ease;
+}
+
+.takeoff-overlay.active .takeoff-plane {
+    animation: bigPlaneFly 0.5s linear forwards;
+}
+
+@keyframes bigPlaneFly {
+    0% {
+        left: 110%;
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    100% {
+        left: -120%;
+        opacity: 1;
+    }
+}
+
+.takeoff-plane {
+    font-size: 65px;
+    color: white;
+    transform: scaleX(-1);
+}
+
+.takeoff-overlay p {
+    margin-top: 20px;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+
+@media (max-width: 480px) {
+
+    .login-card {
+        padding: 32px 22px;
+    }
+
+    .login-card h2 {
+        font-size: 24px;
+    }
+
+    .plane {
+        font-size: 45px;
+    }
+
+    .plane-container {
+        top: 8%;
+    }
+
+}
+
+
+
+/* BIG PLANE TRANSITION */
+
+.takeoff-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    overflow: hidden;
+
+    background: transparent;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.takeoff-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* GIANT AIRPLANE */
+
+.takeoff-plane {
+    position: absolute;
+    top: 50%;
+    left: 110%;
+
+    font-size: 75vw;
+    line-height: 1;
+    white-space: nowrap;
+    color: white;
+
+    transform: translateY(-50%) scaleX(-1);
+    opacity: 0;
+}
+
+.takeoff-overlay.active .takeoff-plane {
+    animation: bigPlaneFly 2.8s ease-in-out forwards;
+}
+
+@keyframes bigPlaneFly {
+    0% {
+        left: 110%;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        left: -120%;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Baggage | Sky Track</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <button class="logout-btn" onclick="logout()">
+    <span>↪</span> Logout
+</button>
+
+<div class="dashboard-container">
+
+    <aside class="sidebar">
+        <h2>✈ SkyTrack</h2>
+
+        <nav>
+            <a href="index.html">Dashboard</a>
+            
+            <a href="reg.html">Registration</a>
+            
+            <a href="track.html">Track Baggage</a>
+            <a href="records.html">Records</a>
+            <a href="manage.html" class="active">Manage Baggage</a>
+            <a href="exceptions.html">Baggage Exceptions</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="dashboard-header">
+            <div>
+                <h1>Manage Baggage</h1>
+                <p>Update baggage handling stages</p>
+            </div>
+        </header>
+
+        <section class="tracking-section">
+            <div class="tracking-heading">
+                <h2>Update Baggage Status</h2>
+                <p>Search using the unique baggage ID.</p>
+            </div>
+
+            <form id="manageForm" class="tracking-form">
+                <input
+                    type="text"
+                    id="manageBaggageID"
+                    placeholder="Enter Baggage ID (e.g. BAG001)"
+                    required
+                >
+                <button type="submit">Find Baggage →</button>
+            </form>
+
+            <div id="manageResult" class="tracking-result">
+                <div class="tracking-empty">
+                    <h3>Search for a baggage record</h3>
+                    <p>Baggage details will appear here.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<script src="manage.js"></script>
+</body>
+<header class="top-header">
+    <div class="header-brand">
+        <span class="brand-icon">✈</span>
+        <span>SkyTrack</span>
+    </div>
+
+    <button class="logout-btn" onclick="logout()">
+        <span>↪</span> Logout
+    </button>
+</header>
+</html>

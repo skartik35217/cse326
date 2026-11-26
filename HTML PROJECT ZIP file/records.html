@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SkyTrack | Records</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    
+    <button class="logout-btn" onclick="logout()">
+        <span>↪</span> Logout
+    </button>
+
+    
+    <div class="container">
+
+     
+        <aside class="sidebar">
+
+            <h2>SkyTrack</h2>
+
+            <nav>
+                <a href="index.html">Dashboard</a>
+                <a href="reg.html">Registration</a>
+                <a href="track.html">Track Baggage</a>
+                <a href="records.html" class="active">Records</a>
+                <a href="manage.html">Manage Baggage</a>
+                <a href="exceptions.html">Baggage Exceptions</a>
+            </nav>
+
+        </aside>
+
+      
+        <main class="main-content">
+
+            <header>
+                <h1>Baggage Records</h1>
+                <p>View and monitor all registered baggage.</p>
+            </header>
+
+           
+            <section class="records">
+
+                <h2>All Baggage Records</h2>
+
+                <div class="records-search">
+
+                    <input
+                        type="text"
+                        id="searchRecords"
+                        placeholder="Search by Baggage ID, Passenger or Flight..."
+                    >
+
+                    <select id="statusFilter">
+                        <option value="all">All Status</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Processing">Processing</option>
+                        <option value="Loaded">Loaded</option>
+                    </select>
+
+                </div>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Baggage ID</th>
+                            <th>Passenger Name</th>
+                            <th>Flight</th>
+                            <th>Destination</th>
+                            <th>Weight</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="recordsTableBody">
+                       
+                    </tbody>
+
+                </table>
+
+                <p id="recordsMessage"></p>
+
+            </section>
+
+        </main>
+
+    </div>
+
+   
+    <script src="records.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

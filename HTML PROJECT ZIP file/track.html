@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Airport Ops | Track Baggage</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<button class="logout-btn" onclick="logout()">
+    <span>↪</span> Logout
+</button>
+<div class="container">
+    <aside class="sidebar">
+
+        <h2>✈ SkyTrack</h2>
+
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="reg.html">Registration</a>
+            <a href="track.html" class="active">Track Baggage</a>
+            <a href="records.html">Records</a>
+            <a href="manage.html">Manage Baggage</a>
+            <a href="exceptions.html">Baggage Exceptions</a>
+        </nav>
+
+    </aside>
+
+    
+    <main class="main-content">
+
+        <header>
+            <h1>Track Baggage</h1>
+            <p>Search and monitor registered passenger baggage.</p>
+        </header>
+
+        <section class="tracking-section">
+
+            <div class="tracking-heading">
+                <h2>Baggage Tracking</h2>
+                <p>Enter your unique baggage ID to view its current status.</p>
+            </div>
+            <div class="qr-scan-section">
+    <h3>Scan Baggage QR Code</h3>
+    <p>Use your camera to scan the QR code on your baggage tag.</p>
+
+    <button type="button" id="startScanner">
+        📷 Start QR Scanner
+    </button>
+
+    <button type="button" id="stopScanner" hidden>
+        Stop Scanner
+    </button>
+
+    <div id="qr-reader"></div>
+
+    <p id="scannerMessage"></p>
+</div>
+
+            <form id="trackingForm" class="tracking-form">
+
+                <input
+                    type="text"
+                    id="trackingID"
+                    placeholder="Enter Baggage ID (e.g. BAG004)"
+                    required
+                >
+
+                <button type="submit">
+                    Search Baggage →
+                </button>
+
+            </form>
+
+            <div id="trackingResult" class="tracking-result">
+
+                <div class="tracking-empty">
+                    <div class="tracking-icon">✈</div>
+                    <h3>Track Your Baggage</h3>
+                    <p>Your baggage information will appear here.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="https://unpkg.com/html5-qrcode"></script>
+<script src="track.js"></script>
+
+</body>
+<header class="top-header">
+    <div class="header-brand">
+        <span class="brand-icon">✈</span>
+        <span>SkyTrack</span>
+    </div>
+
+    <button class="logout-btn" onclick="logout()">
+        <span>↪</span> Logout
+    </button>
+</header>
+</html>

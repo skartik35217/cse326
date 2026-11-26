@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baggage Exceptions | Airport Ops</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button class="logout-btn" onclick="logout()">
+    <span>↪</span> Logout
+</button>
+
+<div class="container">
+
+  
+    <aside class="sidebar">
+
+        <h2>✈ SkyTrack</h2>
+
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="reg.html">Registration</a>
+            <a href="track.html">Track Baggage</a>
+            <a href="records.html">Records</a>
+            <a href="manage.html">Manage Baggage</a>
+            <a href="exceptions.html" class="active">Baggage Exceptions</a>
+        </nav>
+
+    </aside>
+    <main class="main-content">
+
+        <header>
+            <h1>Baggage Exception Handling</h1>
+            <p>Report and manage delayed, missing, or misrouted baggage.</p>
+        </header>
+
+        <section class="registration-section">
+
+            <div class="registration-heading">
+                <div>
+                    <h2>Report Baggage Issue</h2>
+                    <p>Enter the baggage details and report the issue.</p>
+                </div>
+
+                <span class="registration-tag">EXCEPTION REPORT</span>
+            </div>
+
+
+            <form id="exceptionForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="exceptionBaggageID">Baggage ID</label>
+
+                        <input
+                            type="text"
+                            id="exceptionBaggageID"
+                            placeholder="Enter baggage ID"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="exceptionType">Exception Type</label>
+
+                        <select id="exceptionType" required>
+                            <option value="">Select Exception</option>
+                            <option value="Delayed">Delayed</option>
+                            <option value="Missing">Missing</option>
+                            <option value="Misrouted">Misrouted</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="exceptionReason">Reason / Description</label>
+
+                        <textarea
+                            id="exceptionReason"
+                            placeholder="Enter reason for the baggage issue"
+                            rows="4"
+                            required
+                        ></textarea>
+                    </div>
+
+                </div>
+
+
+                <div class="form-actions">
+                    <button type="reset" class="reset-btn">
+                        Reset
+                    </button>
+
+                    <button type="submit" class="submit-btn">
+                        Report Exception
+                    </button>
+                </div>
+
+            </form>
+
+            <div id="exceptionResult"></div>
+
+        </section>
+
+
+        <section class="records">
+
+            <h2>Reported Exceptions</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Baggage ID</th>
+                        <th>Exception</th>
+                        <th>Reason</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+
+                <tbody id="exceptionsTableBody"></tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="exceptions.js"></script>
+
+</body>
+
+</html>
